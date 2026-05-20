@@ -700,7 +700,7 @@ export default function ReviewPage() {
     <div className="flex min-h-screen bg-background">
       <Sidebar />
       <main className="flex-1 min-w-0 pb-20 lg:pb-0">
-        <header className="sticky top-0 z-40 bg-background/95 backdrop-blur-xl border-b border-border">
+        <header className="sticky top-0 z-40 bg-background/95 backdrop-blur-xl border-b border-border safe-area-pt">
           <div className="flex items-center justify-between px-4 lg:px-6 h-14 lg:h-16">
             <div className="min-w-0">
               <h1 className="text-lg lg:text-xl font-semibold text-foreground">Review Inbox</h1>

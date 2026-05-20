@@ -47,8 +47,32 @@ export default function Dashboard() {
     return (
       <div className="flex min-h-screen bg-background">
         <Sidebar />
-        <main className="flex-1 p-6 flex items-center justify-center text-sm text-muted-foreground">
-          Loading Financial Workspace...
+        <main className="flex-1 min-w-0 pb-20 lg:pb-0">
+          {/* Skeleton Header */}
+          <div className="sticky top-0 z-40 bg-background/95 backdrop-blur-xl border-b border-border safe-area-pt">
+            <div className="flex items-center justify-between px-4 lg:px-6 h-14 lg:h-16">
+              <div className="space-y-2">
+                <div className="skeleton h-5 w-32 rounded-lg" />
+                <div className="skeleton h-3 w-24 rounded-lg hidden sm:block" />
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="skeleton h-9 w-24 rounded-xl" />
+                <div className="skeleton h-9 w-9 rounded-xl" />
+              </div>
+            </div>
+          </div>
+          {/* Skeleton Content */}
+          <div className="p-4 lg:p-6 space-y-4 lg:space-y-6">
+            <div className="skeleton h-32 w-full rounded-2xl" />
+            <div className="grid gap-4 lg:gap-6 lg:grid-cols-2">
+              <div className="skeleton h-64 w-full rounded-2xl" />
+              <div className="skeleton h-64 w-full rounded-2xl" />
+            </div>
+            <div className="grid gap-4 lg:gap-6 lg:grid-cols-2">
+              <div className="skeleton h-48 w-full rounded-2xl" />
+              <div className="skeleton h-48 w-full rounded-2xl" />
+            </div>
+          </div>
         </main>
       </div>
     )
@@ -64,7 +88,7 @@ export default function Dashboard() {
       
       <main className="flex-1 min-w-0 pb-20 lg:pb-0">
         {/* Header */}
-        <header className="sticky top-0 z-40 bg-background/95 backdrop-blur-xl border-b border-border">
+        <header className="sticky top-0 z-40 bg-background/95 backdrop-blur-xl border-b border-border safe-area-pt">
           <div className="flex items-center justify-between px-4 lg:px-6 h-14 lg:h-16">
             <div className="min-w-0">
               <h1 className="text-lg lg:text-xl font-semibold text-foreground truncate">{greeting}</h1>
@@ -105,7 +129,7 @@ export default function Dashboard() {
         </header>
  
         {/* Content */}
-        <div className="p-4 lg:p-6 space-y-4 lg:space-y-6 overflow-x-hidden">
+        <div className="p-4 lg:p-6 space-y-4 lg:space-y-6 overflow-x-hidden animate-fade-in-up">
           {isClosed ? (
             <>
               <ClosedMonthSummary snapshot={currentSnapshot} />

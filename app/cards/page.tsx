@@ -23,7 +23,7 @@ export default function CardsPage() {
       
       <main className="flex-1 min-w-0 pb-20 lg:pb-0">
         {/* Header */}
-        <header className="sticky top-0 z-40 bg-background/95 backdrop-blur-xl border-b border-border">
+        <header className="sticky top-0 z-40 bg-background/95 backdrop-blur-xl border-b border-border safe-area-pt">
           <div className="flex items-center justify-between px-4 lg:px-6 h-14 lg:h-16">
             <h1 className="text-lg lg:text-xl font-semibold text-foreground">Cards</h1>
             <Link href="/cards/new" className="flex items-center gap-2 px-3 lg:px-4 py-2 lg:py-2.5 bg-primary text-primary-foreground rounded-xl font-medium text-sm hover:bg-primary/90 transition-all-smooth tap-target">

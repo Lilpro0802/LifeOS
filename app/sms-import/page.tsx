@@ -110,7 +110,7 @@ export default function SmsImportPage() {
 
       <main className="flex-1 min-w-0 pb-20 lg:pb-0">
         {/* Header */}
-        <header className="sticky top-0 z-40 bg-background/95 backdrop-blur-xl border-b border-border">
+        <header className="sticky top-0 z-40 bg-background/95 backdrop-blur-xl border-b border-border safe-area-pt">
           <div className="flex items-center gap-3 px-4 lg:px-6 h-14 lg:h-16">
             <button 
               onClick={() => router.back()}

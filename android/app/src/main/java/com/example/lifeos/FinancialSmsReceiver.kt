@@ -163,11 +163,13 @@ class FinancialSmsReceiver : BroadcastReceiver() {
         }
 
         val notification = NotificationCompat.Builder(context, channelId)
-            .setSmallIcon(android.R.drawable.ic_dialog_info) // System standard fallback icon
+            .setSmallIcon(R.drawable.ic_notification)
+            .setColor(0xFF818CF8.toInt()) // Brand accent color (indigo)
             .setContentTitle(contentTitle)
             .setContentText("Tap to finalize and categorize this transaction.")
             .setStyle(NotificationCompat.BigTextStyle().bigText(body))
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setCategory(NotificationCompat.CATEGORY_MESSAGE)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
             .build()

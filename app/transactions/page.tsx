@@ -87,7 +87,7 @@ export default function TransactionsPage() {
       
       <main className="flex-1 min-w-0 pb-20 lg:pb-0">
         {/* Header */}
-        <header className="sticky top-0 z-40 bg-background/95 backdrop-blur-xl border-b border-border">
+        <header className="sticky top-0 z-40 bg-background/95 backdrop-blur-xl border-b border-border safe-area-pt">
           <div className="flex items-center justify-between px-4 lg:px-6 h-14 lg:h-16">
             <h1 className="text-lg lg:text-xl font-semibold text-foreground">Transactions</h1>
             <button className="p-2 hover:bg-muted rounded-xl transition-all-smooth tap-target">
