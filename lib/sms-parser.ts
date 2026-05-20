@@ -141,7 +141,7 @@ export function parseSms(
 
   // 5. Available Balance
   const balRegexes = [
-    /(?:avl bal|available balance|bal|avail lmt|bal\s+is)\s*(?:rs\.?:?|inr:?)?\s*([\d,]+(?:\.\d{2})?)/i,
+    /(?:avl bal|available balance|bal|avail lmt|bal\s+is)\s*:?\s*(?:rs\.?:?|inr:?|₹)?\s*([\d,]+(?:\.\d{2})?)/i,
   ]
   for (const regex of balRegexes) {
     const match = cleanText.match(regex)
